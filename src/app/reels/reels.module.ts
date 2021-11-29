@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { SharedModule } from '../shared/shared.module';
 import { ReelsRoutingModule } from './reels-routing.module';
 import { ReelsComponent } from './reels/reels.component';
 
@@ -8,7 +8,8 @@ import { ReelsComponent } from './reels/reels.component';
   declarations: [ReelsComponent],
   imports: [
     CommonModule,
-    ReelsRoutingModule
+    ReelsRoutingModule,
+    SharedModule
   ]
 })
 export class ReelsModule { }
