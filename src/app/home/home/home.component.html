@@ -47,30 +47,12 @@
   <ion-item>
   <!-- user slider -->
   <ion-slides pager="true" [options]="slideOpts">
-    <ion-slide>
-      <h1>Slide 1</h1>
+    <ion-slide *ngFor="let item of users">
+
+      <div><img src="{{item.picture.thumbnail}}" alt=""></div>
+      <div>{{item.name.first}} {{item.name.last}}</div>
     </ion-slide>
-    <ion-slide>
-      <h1>Slide 2</h1>
-    </ion-slide>
-    <ion-slide>
-      <h1>Slide 3</h1>
-    </ion-slide>
-    <ion-slide>
-      <h1>Slide 4</h1>
-    </ion-slide>
-    <ion-slide>
-      <h1>Slide 5</h1>
-    </ion-slide>
-    <ion-slide>
-      <h1>Slide 6</h1>
-    </ion-slide>
-    <ion-slide>
-      <h1>Slide 7</h1>
-    </ion-slide>
-    <ion-slide>
-      <h1>Slide 8</h1>
-    </ion-slide>
+
   </ion-slides>
   <!-- EOF user slider -->
 </ion-item>
