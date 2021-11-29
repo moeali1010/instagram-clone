@@ -28,9 +28,13 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/home',
     pathMatch: 'full'
-  }
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('../home/home.module').then(m => m.HomeModule)
+  },
 ];
 
 @NgModule({
