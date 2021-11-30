@@ -1,4 +1,4 @@
-export interface Users {
+export interface UsersPosts {
   id?: {
     name?: string
     value?: string

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, ViewChild } from '@angular/core';
-import { Users } from 'src/app/model/users';
+import { UsersPosts } from 'src/app/model/usersposts';
 
 @Component({
   selector: 'app-stories',
@@ -8,7 +8,7 @@ import { Users } from 'src/app/model/users';
 })
 export class StoriesComponent implements OnInit {
 
-  @Input() users: Users[];
+  @Input() users: UsersPosts[];
   // Slider Option
   slideOpts = {
     initialSlide: 0,

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GetRandomUsersService } from 'src/app/services/get-random-users.service';
-import { Users } from 'src/app/model/users';
+import { UsersPosts } from 'src/app/model/usersposts';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +9,7 @@ import { Users } from 'src/app/model/users';
 })
 export class HomeComponent implements OnInit {
 
-  users: Array<Users> = [];
+  users: Array<UsersPosts> = [];
   pageNumer = 1;
   limit = 8;
   seed = '';

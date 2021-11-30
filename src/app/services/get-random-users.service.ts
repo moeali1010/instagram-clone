@@ -3,7 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from './../../environments/environment';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { Users } from '../model/users';
+import { UsersPosts } from '../model/usersposts';
 @Injectable({
   providedIn: 'root'
 })
@@ -13,8 +13,8 @@ export class GetRandomUsersService {
     private http: HttpClient
   ) { }
 
-  randomUsers( page , results , seed): Observable<Users[]> {
-    return this.http.get<Users[]>(this.baseApiURL + '/api/?page='+page+'&results='+results+
+  randomUsers( page , results , seed): Observable<UsersPosts[]> {
+    return this.http.get<UsersPosts[]>(this.baseApiURL + '/api/?page='+page+'&results='+results+
     '&seed= '+seed+' ').pipe(map((response: any) => response.results));
   }
 
