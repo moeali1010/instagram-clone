@@ -9,19 +9,22 @@ import { Users } from 'src/app/model/users';
 })
 export class HomeComponent implements OnInit {
 
-  users: Users;
+  users: Array<Users>;;
+  pageNumer = 1 ;
+  limit = 30 ;
+  seed = '';
   constructor(private getRandomUsersService: GetRandomUsersService) { }
 
   ngOnInit() {
-    this.getRandomUsers();
+    this.getRandomUsers(this.pageNumer, this.limit, this.seed);
   }
 
-  getRandomUsers() {
+  getRandomUsers( pageNumer ,limit,seed) {
 
-    this.getRandomUsersService.randomUsers(1, 30, '')
+    this.getRandomUsersService.randomUsers(pageNumer ,limit,seed)
       .subscribe(
         (result) => {
-          this.users = result;
+          this.users = result ;
          // console.log(' this.users', this.users);
         },
         (err) => {
@@ -32,6 +35,11 @@ export class HomeComponent implements OnInit {
         }
       );
 
+  }
+
+  loadMore(){
+    this.pageNumer++;
+    this.getRandomUsers(this.pageNumer, this.limit, this.seed);
   }
 
 }

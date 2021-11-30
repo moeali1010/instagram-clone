@@ -13,8 +13,8 @@ export class GetRandomUsersService {
     private http: HttpClient
   ) { }
 
-  randomUsers( page , results , seed): Observable<Users> {
-    return this.http.get<Users>(this.baseApiURL + '/api/?page='+page+'&results='+results+
+  randomUsers( page , results , seed): Observable<Users[]> {
+    return this.http.get<Users[]>(this.baseApiURL + '/api/?page='+page+'&results='+results+
     '&seed= '+seed+' ').pipe(map((resp: any) => resp.results));
   }
 
