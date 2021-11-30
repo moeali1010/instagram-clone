@@ -1,4 +1,4 @@
-<ion-card class="post-card" *ngFor="let item of users">
+<ion-card class="post-card" *ngFor="let item of users; let i = index"  >
   <ion-row>
     <ion-col>
 
@@ -13,7 +13,7 @@
 
   </ion-row>
 
-  <img src="./assets/images/madison.jpg" alt="">
+  <img src="https://picsum.photos/2000/1000?random={{i}}">
   <ion-row>
     <ion-col>
       <ion-icon name="heart-outline"></ion-icon>
