@@ -14,13 +14,13 @@
 
 
           <ion-row>
-            <ion-col >
+            <ion-col>
               <ion-icon name="add-circle-outline" size="large"></ion-icon>
             </ion-col>
             <ion-col>
               <ion-icon name="heart-outline" size="large"></ion-icon>
             </ion-col>
-            <ion-col >
+            <ion-col>
               <ion-icon name="chatbox-outline" size="large"></ion-icon>
             </ion-col>
           </ion-row>
@@ -45,16 +45,17 @@
 <ion-content [fullscreen]="true">
 
   <ion-item>
-  <!-- user slider -->
-  <ion-slides pager="true" [options]="slideOpts">
-    <ion-slide *ngFor="let item of users">
+    <!-- user slider -->
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide *ngFor="let item of users">
+        <aside class="users-list">
+          <img src="{{item.picture.thumbnail}}" />
+          <div>{{item.name.first}}_{{item.name.last}}</div>
+        </aside>
+      </ion-slide>
 
-      <div><img src="{{item.picture.thumbnail}}" alt=""></div>
-      <div>{{item.name.first}} {{item.name.last}}</div>
-    </ion-slide>
-
-  </ion-slides>
-  <!-- EOF user slider -->
-</ion-item>
+    </ion-slides>
+    <!-- EOF user slider -->
+  </ion-item>
 
 </ion-content>
