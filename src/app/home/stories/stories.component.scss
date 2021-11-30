@@ -1,0 +1,16 @@
+.users-list{
+  img{
+    border-radius: 100%;
+    border: 2px solid #df3d71;
+    padding: 2px;
+  }
+  div{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 75px;
+    font-size: 13px;
+    padding-bottom: 10px;
+  }
+
+}
