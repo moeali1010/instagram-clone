@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild , Output ,EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, ViewChild, Output, EventEmitter } from '@angular/core';
 import { Users } from 'src/app/model/users';
 import { IonInfiniteScroll } from '@ionic/angular';
 
@@ -14,7 +14,7 @@ export class PostsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    //console.log("users post" , this.users);
+    console.log('users post' , this.users);
   }
 
 
@@ -34,5 +34,8 @@ export class PostsComponent implements OnInit {
 
   toggleInfiniteScroll() {
     this.infiniteScroll.disabled = !this.infiniteScroll.disabled;
+  }
+  likePost(item) {
+    item.like = !item.like  ;
   }
 }

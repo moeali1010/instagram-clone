@@ -15,7 +15,7 @@ export class GetRandomUsersService {
 
   randomUsers( page , results , seed): Observable<Users[]> {
     return this.http.get<Users[]>(this.baseApiURL + '/api/?page='+page+'&results='+results+
-    '&seed= '+seed+' ').pipe(map((resp: any) => resp.results));
+    '&seed= '+seed+' ').pipe(map((response: any) => response.results));
   }
 
 

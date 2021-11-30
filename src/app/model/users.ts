@@ -14,4 +14,5 @@ export interface Users {
     medium?: string,
     thumbnail?: string,
   }
+  like:boolean
 }

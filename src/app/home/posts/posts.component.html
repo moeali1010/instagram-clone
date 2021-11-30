@@ -14,7 +14,8 @@
 
   <ion-row>
     <ion-col>
-      <ion-icon name="heart-outline"></ion-icon>
+      <ion-icon name="heart-outline" (click)="likePost(item)" *ngIf="!item.like"></ion-icon>
+      <ion-icon name="heart" (click)="likePost(item)" *ngIf="item.like"></ion-icon>
       <ion-icon name="chatbubble-outline"></ion-icon>
       <ion-icon name="paper-plane-outline"></ion-icon>
     </ion-col>

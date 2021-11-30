@@ -25,7 +25,10 @@ export class HomeComponent implements OnInit {
       .subscribe(
         (data) => {
 
-          data.forEach(element => this.users.push(element));
+          data.forEach(element => {
+            element.like = false ;
+            this.users.push(element);
+          });
         },
         (err) => {
           // console.log('error is', err);
