@@ -5,8 +5,9 @@ import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home/home.component';
 import { GetRandomUsersService } from 'src/app/services/get-random-users.service';
 import { StoriesComponent } from './stories/stories.component';
+import { PostComponent } from './post/post.component';
 @NgModule({
-  declarations: [HomeComponent, StoriesComponent],
+  declarations: [HomeComponent, StoriesComponent , PostComponent],
   imports: [
     CommonModule,
     HomeRoutingModule ,
