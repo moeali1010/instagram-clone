@@ -29,6 +29,7 @@
     standard dummy text ever since the 1500s.
   </ion-card-content>
 
+  <app-post-comment [post]="item"></app-post-comment>
 </ion-card>
 
 <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">

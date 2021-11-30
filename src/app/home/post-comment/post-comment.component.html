@@ -1,0 +1,23 @@
+<div *ngIf="post.comments.length>3" class="view-all-comments">View all {{post.comments.length}} comments</div>
+<ion-list>
+  <ion-item *ngFor="let comment of post.comments | slice:0:3; " class="single-comment">
+    <ion-label>Elliot_Mckinney <span>{{comment}}</span></ion-label>
+  </ion-item>
+</ion-list>
+
+<ion-grid>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <ion-row>
+      <ion-col class="comment-user" size="2">
+        <img src="https://randomuser.me/api/portraits/thumb/men/1.jpg" class="user-pic" />
+      </ion-col>
+      <ion-col class="comment-text ion-text-start" size="7">
+        <ion-input formControlName="comment" placeholder="Add a comment..."></ion-input>
+
+      </ion-col>
+      <ion-col class="comment-text ion-text-end" size="3">
+        <ion-button [disabled]="!form.valid" class="comment-btn" color="light" type="submit">Post</ion-button>
+      </ion-col>
+    </ion-row>
+  </form>
+</ion-grid>

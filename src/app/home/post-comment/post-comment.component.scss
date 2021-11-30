@@ -1,0 +1,31 @@
+.user-pic{
+  border-radius: 100%;
+  border: 2px solid #df3d71;
+  padding: 2px;
+  float: left;
+  width: 32px;
+  height: 32px;
+}
+.comment-text{
+
+}
+
+.comment-btn{
+  --box-shadow:none;
+  --border:none;
+
+}
+.view-all-comments{
+  color: #ccc;
+}
+
+.single-comment{
+  border-bottom: none;
+  height: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  span{
+    font-size: 12px;
+    font-weight: normal;
+  }
+}

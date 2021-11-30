@@ -27,6 +27,7 @@ export class HomeComponent implements OnInit {
 
           data.forEach(element => {
             element.like = false ;
+            element.comments = [] ;
             this.users.push(element);
           });
         },

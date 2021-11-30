@@ -14,5 +14,6 @@ export interface Users {
     medium?: string,
     thumbnail?: string,
   }
-  like:boolean
+  like: boolean,
+  comments: any
 }
