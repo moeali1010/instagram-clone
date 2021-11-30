@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { GetRandomUsersService } from 'src/app/services/get-random-users.service';
+import { Component, OnInit, Input } from '@angular/core';
 import { Users } from 'src/app/model/users';
 
 @Component({
@@ -9,37 +8,21 @@ import { Users } from 'src/app/model/users';
 })
 export class StoriesComponent implements OnInit {
 
-   // Slider Option
-   slideOpts = {
+  @Input() users: Users;
+  // Slider Option
+  slideOpts = {
     initialSlide: 0,
-    slidesPerView: 4 ,
+    slidesPerView: 4,
     speed: 400,
     pagination: false
   };
-  users: Users;
-  constructor(private getRandomUsersService: GetRandomUsersService) { }
+
+  constructor() { }
 
   ngOnInit() {
-    this.getRandomUsers();
+//console.log("users" , this.users);
   }
 
-  getRandomUsers() {
 
-    this.getRandomUsersService.randomUsers( 1 , 30 , 'feed')
-      .subscribe(
-
-        (result) => {
-          this.users =  result ;
-          console.log(' this.users',  this.users);
-        },
-        (err) => {
-          console.log('error is', err);
-        },
-        () => {
-          console.log('comsplete');
-        }
-      );
-
-  }
 
 }

@@ -1,18 +1,16 @@
 <ion-header [translucent]="true" class="ion-no-border">
   <ion-toolbar>
 
-
-
     <ion-grid>
       <ion-row>
+
         <ion-col>
           <ion-title>
             <img src="./assets/images/logo.png" alt="">
           </ion-title>
         </ion-col>
+
         <ion-col class="ion-text-end">
-
-
           <ion-row>
             <ion-col>
               <ion-icon  name="add-circle-outline" size="large"></ion-icon>
@@ -21,20 +19,9 @@
               <ion-icon  name="heart-outline" size="large"></ion-icon>
             </ion-col>
             <ion-col>
-
               <ion-icon  name="paper-plane-outline" size="large"></ion-icon>
             </ion-col>
           </ion-row>
-
-
-
-
-
-
-
-
-
-
         </ion-col>
 
       </ion-row>
@@ -45,6 +32,6 @@
 
 <ion-content [fullscreen]="true">
 
-  <app-stories></app-stories>
-  <app-post></app-post>
+  <app-stories [users]="users" *ngIf="users"></app-stories>
+  <app-post [users]="users" *ngIf="users"></app-post>
 </ion-content>
