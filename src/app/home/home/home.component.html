@@ -32,6 +32,6 @@
 
 <ion-content [fullscreen]="true">
 
-  <app-stories [users]="users" *ngIf="users"></app-stories>
-  <app-post [users]="users" *ngIf="users" (loadMore)="loadMore()"></app-post>
+  <app-stories [users]="users" *ngIf="users.length!==0"></app-stories>
+  <app-post [users]="users" *ngIf="users.length!==0" (loadMore)="loadMore()"></app-post>
 </ion-content>

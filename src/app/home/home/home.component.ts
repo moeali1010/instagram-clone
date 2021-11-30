@@ -9,9 +9,9 @@ import { Users } from 'src/app/model/users';
 })
 export class HomeComponent implements OnInit {
 
-  users: Array<Users>;;
-  pageNumer = 1 ;
-  limit = 30 ;
+  users: Array<Users> = [];
+  pageNumer = 1;
+  limit = 8;
   seed = '';
   constructor(private getRandomUsersService: GetRandomUsersService) { }
 
@@ -19,16 +19,16 @@ export class HomeComponent implements OnInit {
     this.getRandomUsers(this.pageNumer, this.limit, this.seed);
   }
 
-  getRandomUsers( pageNumer ,limit,seed) {
+  getRandomUsers(pageNumer, limit, seed) {
 
-    this.getRandomUsersService.randomUsers(pageNumer ,limit,seed)
+    this.getRandomUsersService.randomUsers(pageNumer, limit, seed)
       .subscribe(
-        (result) => {
-          this.users = result ;
-         // console.log(' this.users', this.users);
+        (data) => {
+
+          data.forEach(element => this.users.push(element));
         },
         (err) => {
-         // console.log('error is', err);
+          // console.log('error is', err);
         },
         () => {
           //console.log('complete');
@@ -37,7 +37,7 @@ export class HomeComponent implements OnInit {
 
   }
 
-  loadMore(){
+  loadMore() {
     this.pageNumer++;
     this.getRandomUsers(this.pageNumer, this.limit, this.seed);
   }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input ,ViewChild } from '@angular/core';
+import { Component, OnInit, Input, ViewChild } from '@angular/core';
 import { Users } from 'src/app/model/users';
 
 @Component({
@@ -20,7 +20,7 @@ export class StoriesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-//console.log("users" , this.users);
+    //console.log('users stories', this.users);
   }
 
 

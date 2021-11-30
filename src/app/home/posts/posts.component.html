@@ -1,38 +1,33 @@
 <ion-card class="post-card" *ngFor="let item of users; let i = index"  >
+
   <ion-row>
     <ion-col>
-
       <img src="{{item.picture.thumbnail}}" class="user-pic" />
       <div class="user-name"> {{item.name.first}}_{{item.name.last}}</div>
-
     </ion-col>
-
     <ion-col class="ion-text-end post-menu">
       <ion-icon name="ellipsis-vertical-sharp" size="small"></ion-icon>
     </ion-col>
-
   </ion-row>
 
   <img src="https://picsum.photos/2000/1000?random={{i}}">
+
   <ion-row>
     <ion-col>
       <ion-icon name="heart-outline"></ion-icon>
       <ion-icon name="chatbubble-outline"></ion-icon>
       <ion-icon name="paper-plane-outline"></ion-icon>
-
     </ion-col>
-
     <ion-col class="ion-text-end ">
       <ion-icon name="bookmark-outline"></ion-icon>
     </ion-col>
-
   </ion-row>
-
 
   <ion-card-content>
     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
     standard dummy text ever since the 1500s.
   </ion-card-content>
+
 </ion-card>
 
 <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
