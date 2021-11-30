@@ -20,15 +20,8 @@ export class PostsComponent implements OnInit {
 
   loadData(event) {
     setTimeout(() => {
-      //console.log('Done');
       event.target.complete();
-
-      // App logic to determine if all data is loaded
       this.loadMore.emit('loadMore');
-      // and disable the infinite scroll
-      if (this.users.length === 30) {
-        event.target.disabled = true;
-      }
     }, 500);
   }
 
