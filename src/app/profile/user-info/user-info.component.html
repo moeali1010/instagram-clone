@@ -1,3 +1,24 @@
-<p>
-  user-info works!
-</p>
+<ion-grid>
+  <ion-row>
+    <ion-col class="ion-text-center">
+      <img src="{{profileData.picture.thumbnail}}" class="user-pic-big-size" />
+    </ion-col>
+    <ion-col class="ion-text-center">
+      <div class="info-value">298</div>
+      <div class="info-title">posts</div>
+    </ion-col>
+    <ion-col class="ion-text-center">
+      <div class="info-value">3.3M</div>
+      <div class="info-title">Followers</div>
+    </ion-col>
+    <ion-col class="ion-text-center">
+      <div class="info-value">1542</div>
+      <div class="info-title">Following</div>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      {{profileData.name.first}} {{profileData.name.last}}
+    </ion-col>
+  </ion-row>
+</ion-grid>

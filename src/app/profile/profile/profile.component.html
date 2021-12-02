@@ -1,3 +1,20 @@
-<p>
-  profile works!
-</p>
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-title>
+            <ion-icon name="arrow-back-outline" routerLink="/tabs/home"></ion-icon>
+          </ion-title>
+        </ion-col>
+        <ion-col class="ion-text-start bold-title">
+          {{profileData?.name.first}} {{profileData?.name.last}}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <app-user-info [profileData]="profileData" *ngIf="profileData"></app-user-info>
+</ion-content>

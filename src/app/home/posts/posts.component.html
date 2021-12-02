@@ -1,7 +1,7 @@
 <ion-card class="post-card" *ngFor="let item of users; let i = index"  >
 
   <ion-row>
-    <ion-col>
+    <ion-col routerLink="/profile/{{item?.id.name}}/{{item?.id.value}}">
       <img src="{{item.picture.thumbnail}}" class="user-pic" />
       <div class="user-name"> {{item.name.first}}_{{item.name.last}}</div>
     </ion-col>

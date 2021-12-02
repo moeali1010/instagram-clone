@@ -7,15 +7,13 @@ import { UsersPosts } from '../model/usersposts';
 @Injectable({
   providedIn: 'root'
 })
-export class GetRandomUsersService {
+export class ProfileService {
   baseApiURL = environment.apiUrl;
   constructor(
     private http: HttpClient
   ) { }
 
-  randomUsers( page , results , seed): Observable<UsersPosts[]> {
-    return this.http.get<UsersPosts[]>(this.baseApiURL + '/api/?page='+page+'&results='+results+
-    '&seed= '+seed+' ').pipe(map((response: any) => response.results));
+  getProfileData( idName , idValue): Observable<UsersPosts[]> {
+    return this.http.get<UsersPosts[]>(this.baseApiURL + '/api').pipe(map((response: any) => response.results[0]));
   }
-
 }

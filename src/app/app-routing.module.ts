@@ -7,7 +7,11 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
-    path: 'profile/:id',
+    path: 'profile/:id/:value',
+    loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule)
+  },
+  {
+    path: 'profile',
     loadChildren: () => import('./profile/profile.module').then(m => m.ProfileModule)
   }
 ];

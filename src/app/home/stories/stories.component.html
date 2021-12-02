@@ -2,7 +2,7 @@
   <ion-slides pager="true" [options]="slideOpts">
     <ion-slide *ngFor="let item of users">
       <aside class="users-list">
-        <img src="{{item.picture.thumbnail}}" />
+        <img src="{{item.picture.thumbnail}}" class="user-pic-big-size"/>
         <div>{{item.name.first}}_{{item.name.last}}</div>
       </aside>
     </ion-slide>
