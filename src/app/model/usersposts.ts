@@ -14,6 +14,7 @@ export interface UsersPosts {
     medium?: string,
     thumbnail?: string,
   }
+  description:string,
   like: boolean,
   comments: any
 }

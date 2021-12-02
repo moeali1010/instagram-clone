@@ -26,8 +26,11 @@ export class HomeComponent implements OnInit {
         (data) => {
 
           data.forEach(element => {
-            element.like = false ;
-            element.comments = [] ;
+            element.like = false;
+            element.comments = [];
+            element.description = `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+             Lorem Ipsum has been the industry's
+            standard dummy text ever since the 1500s.` ;
             this.users.push(element);
           });
         },
