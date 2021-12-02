@@ -10,7 +10,7 @@ export class UserInfoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('profileData' , this.profileData);
+//    console.log('profileData' , this.profileData);
   }
 
 }

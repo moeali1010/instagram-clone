@@ -2,12 +2,10 @@
   <ion-toolbar>
     <ion-grid>
       <ion-row>
-        <ion-col>
-          <ion-title>
-            <ion-icon name="arrow-back-outline" routerLink="/tabs/home"></ion-icon>
-          </ion-title>
+        <ion-col size="1">
+          <ion-icon name="arrow-back-outline" routerLink="/tabs/home"></ion-icon>
         </ion-col>
-        <ion-col class="ion-text-start bold-title">
+        <ion-col size="11" class="ion-text-start bold-title">
           {{profileData?.name.first}} {{profileData?.name.last}}
         </ion-col>
       </ion-row>
@@ -17,4 +15,5 @@
 
 <ion-content [fullscreen]="true">
   <app-user-info [profileData]="profileData" *ngIf="profileData"></app-user-info>
+  <app-user-posts [profileData]="profileData" *ngIf="profileData"></app-user-posts>
 </ion-content>
