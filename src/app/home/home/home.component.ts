@@ -9,7 +9,7 @@ import { UsersPosts } from 'src/app/model/usersposts';
 })
 export class HomeComponent implements OnInit {
 
-  users: Array<UsersPosts> = [];
+  usersPosts: Array<UsersPosts> = [];
   pageNumer = 1;
   limit = 8;
   seed = '';
@@ -31,7 +31,7 @@ export class HomeComponent implements OnInit {
             element.description = `Lorem Ipsum is simply dummy text of the printing and typesetting industry.
              Lorem Ipsum has been the industry's
             standard dummy text ever since the 1500s.` ;
-            this.users.push(element);
+            this.usersPosts.push(element);
           });
         },
         (err) => {

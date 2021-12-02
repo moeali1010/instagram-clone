@@ -9,12 +9,12 @@ import { IonInfiniteScroll } from '@ionic/angular';
 })
 export class PostsComponent implements OnInit {
   @ViewChild(IonInfiniteScroll) infiniteScroll: IonInfiniteScroll;
-  @Input() users: UsersPosts[];
+  @Input() usersPosts: UsersPosts[];
   @Output() loadMore = new EventEmitter<string>();
   constructor() { }
 
   ngOnInit() {
-    console.log('users post' , this.users);
+    console.log('users post' , this.usersPosts);
   }
 
 
