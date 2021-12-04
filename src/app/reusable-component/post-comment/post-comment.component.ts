@@ -15,7 +15,7 @@ export class PostCommentComponent implements OnInit {
 
   ngOnInit() {
     this.initializeForm();
-    console.log('displayAllComments' , this.displayAllComments);
+    //console.log('displayAllComments' , this.displayAllComments);
   }
 
   initializeForm() {
