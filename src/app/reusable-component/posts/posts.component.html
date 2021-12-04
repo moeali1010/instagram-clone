@@ -1,7 +1,7 @@
-<ion-card class="post-card" *ngFor="let item of usersPosts; let i = index"  >
+<ion-card class="post-card"  >
 
   <ion-row>
-    <ion-col routerLink="/profile/{{item?.id.name}}/{{item?.id.value}}">
+    <ion-col >
       <img src="{{item.picture.thumbnail}}" class="user-pic" />
       <div class="user-name"> {{item.name.first}}_{{item.name.last}}</div>
     </ion-col>
@@ -10,7 +10,7 @@
     </ion-col>
   </ion-row>
 
-  <img src="https://picsum.photos/2000/1000?random={{i}}">
+  <img src="https://picsum.photos/2000/1000?random={{index}}">
 
   <ion-row>
     <ion-col>
@@ -31,9 +31,4 @@
   <app-post-comment [post]="item"></app-post-comment>
 </ion-card>
 
-<ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
-  <ion-infinite-scroll-content
-    loadingSpinner="bubbles"
-    loadingText="Loading more data...">
-  </ion-infinite-scroll-content>
-</ion-infinite-scroll>
+

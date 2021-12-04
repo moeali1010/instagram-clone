@@ -13,13 +13,13 @@
         <ion-col class="ion-text-end">
           <ion-row>
             <ion-col>
-              <ion-icon  name="add-circle-outline" size="large"></ion-icon>
+              <ion-icon name="add-circle-outline" size="large"></ion-icon>
             </ion-col>
             <ion-col>
-              <ion-icon  name="heart-outline" size="large"></ion-icon>
+              <ion-icon name="heart-outline" size="large"></ion-icon>
             </ion-col>
             <ion-col>
-              <ion-icon  name="paper-plane-outline" size="large"></ion-icon>
+              <ion-icon name="paper-plane-outline" size="large"></ion-icon>
             </ion-col>
           </ion-row>
         </ion-col>
@@ -33,5 +33,16 @@
 <ion-content [fullscreen]="true">
 
   <app-stories [users]="usersPosts" *ngIf="usersPosts.length!==0"></app-stories>
-  <app-post [usersPosts]="usersPosts" *ngIf="usersPosts.length!==0" (loadMore)="loadMore()"></app-post>
+  <section *ngIf="usersPosts.length!==0">
+    <app-post [item]="item" [index]="i"  *ngFor="let item of usersPosts; let i = index">
+    </app-post>
+  </section>
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
 </ion-content>
