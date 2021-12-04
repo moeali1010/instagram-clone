@@ -5,8 +5,9 @@ import { ProfileRoutingModule } from './profile-routing.module';
 import { SharedModule } from '../shared/shared.module';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { UserPostsComponent } from './user-posts/user-posts.component';
+import { PostDetailComponent } from './post-detail/post-detail.component';
 @NgModule({
-  declarations: [ProfileComponent , UserInfoComponent , UserPostsComponent],
+  declarations: [ProfileComponent , UserInfoComponent , UserPostsComponent , PostDetailComponent],
   imports: [
     CommonModule,
     ProfileRoutingModule,

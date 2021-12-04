@@ -9,7 +9,9 @@ import { ProfileService } from 'src/app/services/profile.service';
 export class ProfileComponent implements OnInit {
   idName: string;
   idValue: string;
+  postDetailId: string;
   profileData: any;
+  postId: any;
   constructor(
     private activatedRoute: ActivatedRoute,
     private router: Router,
@@ -19,6 +21,7 @@ export class ProfileComponent implements OnInit {
   ngOnInit() {
     this.idName = this.activatedRoute.snapshot.paramMap.get('id');
     this.idValue = this.activatedRoute.snapshot.paramMap.get('value');
+    this.postDetailId = this.activatedRoute.snapshot.paramMap.get('postDetailId');
     this.getProfile(this.idName, this.idValue);
   }
   getProfile(idName: string, idValue: string) {

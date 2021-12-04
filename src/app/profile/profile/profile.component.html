@@ -14,6 +14,8 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <app-user-info [profileData]="profileData" *ngIf="profileData"></app-user-info>
-  <app-user-posts [profileData]="profileData" *ngIf="profileData"></app-user-posts>
+  <app-user-info [profileData]="profileData" *ngIf="profileData && !postId"></app-user-info>
+  <app-user-posts [profileData]="profileData" *ngIf="profileData && !postId"></app-user-posts>
+  <app-post-detail *ngIf="postId" [postId]="postId"></app-post-detail>
+
 </ion-content>
