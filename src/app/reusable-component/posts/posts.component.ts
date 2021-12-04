@@ -15,7 +15,7 @@ export class PostsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log('item', this.item);
+    //console.log('item', this.item);
   }
 
   likePost(item) {

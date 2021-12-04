@@ -1,21 +1,8 @@
-<ion-header [translucent]="true" class="ion-no-border">
-  <ion-toolbar>
-    <ion-grid>
-      <ion-row>
-        <ion-col size="1">
-          <ion-icon name="arrow-back-outline" routerLink="/tabs/home"></ion-icon>
-        </ion-col>
-        <ion-col size="11" class="ion-text-start bold-title">
-          {{profileData?.name.first}} {{profileData?.name.last}}
-        </ion-col>
-      </ion-row>
-    </ion-grid>
-  </ion-toolbar>
-</ion-header>
+<app-profile-header [profileData]="profileData" *ngIf="profileData"></app-profile-header>
 
 <ion-content [fullscreen]="true">
-  <app-user-info [profileData]="profileData" *ngIf="profileData && !postId"></app-user-info>
-  <app-user-posts [profileData]="profileData" *ngIf="profileData && !postId"></app-user-posts>
-  <app-post-detail *ngIf="postId" [postId]="postId"></app-post-detail>
+  <app-user-info [profileData]="profileData" *ngIf="profileData" ></app-user-info>
+  <app-user-posts [profileData]="profileData" *ngIf="profileData"></app-user-posts>
+
 
 </ion-content>

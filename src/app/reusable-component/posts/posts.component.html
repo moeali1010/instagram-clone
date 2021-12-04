@@ -1,8 +1,9 @@
 <ion-card class="post-card"  >
 
   <ion-row>
-    <ion-col >
-      <img src="{{item.picture.thumbnail}}" class="user-pic" />
+    <ion-col routerLink="/profile/{{item.id.name}}/{{item.id.value}}"  >
+
+      <img src="{{item.picture.thumbnail}}" class="user-pic"  />
       <div class="user-name"> {{item.name.first}}_{{item.name.last}}</div>
     </ion-col>
     <ion-col class="ion-text-end post-menu">
