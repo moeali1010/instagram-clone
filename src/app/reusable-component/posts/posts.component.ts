@@ -10,7 +10,8 @@ import { UsersPosts } from 'src/app/model/usersposts';
 export class PostsComponent implements OnInit {
 
   @Input() item: any;
-  @Input() index: any;
+  @Input() index: any ;
+  @Input() displayAllComments = false ;
 
   constructor() { }
 

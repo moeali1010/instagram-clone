@@ -1,6 +1,6 @@
-<div *ngIf="post.comments.length>3" class="view-all-comments">View all {{post.comments.length}} comments</div>
+<div *ngIf="post.comments.length>3 && !displayAllComments" class="view-all-comments">View all {{post.comments.length}} comments</div>
 <ion-list>
-  <ion-item *ngFor="let comment of post.comments | slice:0:3; " class="single-comment">
+  <ion-item *ngFor="let comment of comments  " class="single-comment">
     <ion-label>Elliot_Mckinney <span>{{comment}}</span></ion-label>
   </ion-item>
 </ion-list>

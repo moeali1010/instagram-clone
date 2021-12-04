@@ -1,8 +1,7 @@
 <ion-card class="post-card"  >
 
   <ion-row>
-    <ion-col routerLink="/profile/{{item.id.name}}/{{item.id.value}}"  >
-
+    <ion-col routerLink="/profile/{{item?.id.name}}/{{item?.id.value}}"  >
       <img src="{{item.picture.thumbnail}}" class="user-pic"  />
       <div class="user-name"> {{item.name.first}}_{{item.name.last}}</div>
     </ion-col>
@@ -29,7 +28,7 @@
     {{item.description}}
   </ion-card-content>
 
-  <app-post-comment [post]="item"></app-post-comment>
+  <app-post-comment [post]="item" [displayAllComments]="displayAllComments"></app-post-comment>
 </ion-card>
 
 

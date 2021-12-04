@@ -11,7 +11,6 @@ export class UserPostsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    //    console.log('profileData' , this.profileData);
     for (let index = 0; index < 30; index++) {
       this.userPosts.push(index);
     }

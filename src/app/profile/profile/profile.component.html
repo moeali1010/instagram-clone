@@ -1,8 +1,7 @@
 <app-profile-header [profileData]="profileData" *ngIf="profileData"></app-profile-header>
 
 <ion-content [fullscreen]="true">
-  <app-user-info [profileData]="profileData" *ngIf="profileData" ></app-user-info>
-  <app-user-posts [profileData]="profileData" *ngIf="profileData"></app-user-posts>
-
-
+  <app-user-info [profileData]="profileData" *ngIf="profileData"></app-user-info>
+  <app-user-posts [profileData]="profileData" *ngIf="profileData && !postDetailId"></app-user-posts>
+  <app-post [item]="profileData" [index]="1" [displayAllComments]="true" *ngIf="profileData && postDetailId"></app-post>
 </ion-content>

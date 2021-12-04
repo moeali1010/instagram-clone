@@ -7,11 +7,15 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class PostCommentComponent implements OnInit {
   @Input() post: any;
+  @Input() displayAllComments ;
+
   form: any;
+  comments: [];
   constructor() { }
 
   ngOnInit() {
     this.initializeForm();
+    console.log('displayAllComments' , this.displayAllComments);
   }
 
   initializeForm() {
@@ -23,5 +27,12 @@ export class PostCommentComponent implements OnInit {
   onSubmit() {
     this.post.comments.push(this.form.controls.comment.value);
     this.form.controls.comment.setValue('');
+    if( this.displayAllComments ){ // display all comments
+      this.comments   = this.post.comments;
+    }else{
+      this.comments = this.post.comments.slice(0, 3);
+    }
+
+
   }
 }

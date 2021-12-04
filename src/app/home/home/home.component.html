@@ -34,7 +34,7 @@
 
   <app-stories [users]="usersPosts" *ngIf="usersPosts.length!==0"></app-stories>
   <section *ngIf="usersPosts.length!==0">
-    <app-post [item]="item" [index]="i"  *ngFor="let item of usersPosts; let i = index">
+    <app-post [item]="item" [index]="i" [displayAllComments]="false"  *ngFor="let item of usersPosts; let i = index">
     </app-post>
   </section>
 
